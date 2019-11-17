@@ -12,10 +12,14 @@
   </head>
   <body>
   <h1>开始学习</h1>
-  <form action="login" method="post">
+  <form action="loginrequestservlet" method="get">
     <input name="username">
     <input type="submit" value="提交">
 
   </form>
+  <hr>
+
+  <a href="loginrequestservlet">demo</a>
+
   </body>
 </html>

@@ -130,9 +130,42 @@ Request：获取请求消息
 
 
 
-3、
-
-
+3、request 功能
+1. 获取请求行数据
+    * GET 
+    * 方法
+        1. 获取请求方式：GET/POSt
+        
+            String getMethod()
+            
+        2. 获取虚拟目录
+        
+            String getContextPath()
+            
+        3. 获取Servlet路径
+        
+            String getServletpath()
+            
+        4. 获取get方式请求参数
+        
+            String getQueryString()
+            
+        5. 获取请求URI：
+        
+            String getRequestURI()
+            
+            StringBUffer getRequestURL()
+            
+        6. 获取协议版本
+        
+            String getProtocol()
+            
+        7. 获取客户机的IP地址
+        
+            String getRemoteAddr()
+            
+            
+    2. 获取
 
 
 
