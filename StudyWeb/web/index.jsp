@@ -12,5 +12,10 @@
   </head>
   <body>
   <h1>开始学习</h1>
+  <form action="login" method="post">
+    <input name="username">
+    <input type="submit" value="提交">
+
+  </form>
   </body>
 </html>
