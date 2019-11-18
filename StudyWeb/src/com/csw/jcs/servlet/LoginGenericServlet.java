@@ -13,11 +13,11 @@ public class LoginGenericServlet extends GenericServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        System.out.println("ServletParent init ");
+        System.out.println("LoginGenericServlet init ");
     }
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("ServletParent .... ");
+        System.out.println("LoginGenericServlet .... ");
     }
 }
