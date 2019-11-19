@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
 
-@WebServlet("/login")
+@WebServlet("/log")
 public class LoginServlet implements Servlet {
 
     /**
