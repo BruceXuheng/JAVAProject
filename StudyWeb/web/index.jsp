@@ -12,7 +12,7 @@
   </head>
   <body>
   <h1>开始学习</h1>
-  <form action="loginrequestservlet" method="get">
+  <form action="login" method="get">
     <input name="username">
     <input type="submit" value="提交">
 
