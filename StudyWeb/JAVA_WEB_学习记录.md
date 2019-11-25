@@ -159,7 +159,7 @@ Request：获取请求消息
         6. 获取协议版本
         
             String getProtocol()
-            
+              `` 
         7. 获取客户机的IP地址
         
             String getRemoteAddr()
@@ -167,19 +167,91 @@ Request：获取请求消息
             
     2. 获取
 
+       ​	1.设置请求数据编码
+
+       ​	request.setCharacterEncoding("utf-8");
 
 
+
+### doGet获取参数转Bean类
+
+1.需要导入
+
+>commons-beanutils-1.9.4.jar
+>
+>commons-collections-3.2.2.jar(如果导入beanUtils包报错，需要再导入collections包，java.lang.NoClassDefFoundError: org/apache/commons/collections/FastHashMap)
+
+2.Bean类需创建 具体如下
+
+```
+//2.第二种使用BeanUtils包
+Map<String,String[]> map = request.getParameterMap();
+UserBean loginUser2 = new UserBean();
+try {
+    BeanUtils.populate(loginUser2,map);
+} catch (IllegalAccessException | InvocationTargetException e) {
+    e.printStackTrace();
+}
+```
+
+3.其他使用方法：
+
+setProperty()
+
+getProperty()
+
+populate(object,map) 讲map集合的键值对，封装到Bean中 
 
 
 
 
 ## Http 响应数据格式
 
+### 1.请求消息：客户端发送服务器数据
+
+​	数据格式：
+
+		1. 请求行
+	
+		2. 请求头
+		
+		3. 请求空行
+		
+		4. 请求体
 
 
 
+2.响应消息：服务器端发送客户端的数据
+
+​	数据格式：
+
+```
+	1. 响应行
+		1.组成：协议/版本 响应状态码 状态码描述
+		2.响应状态码：
+			1.状态码3位数
+			2.分类：
+			1**：服务器接收客户端消息，但是没有接收完成，等待一段时间后，发送1**多状态码
+			2**：成功，代表200
+			3**：重定向，302重定向；304访问缓存
+			4**：客户端错误 404对应路径没有资源；405请求方式没有对应do**方法
+			5**：服务器端错误 500服务器内部异常
+
+	2. 响应头
+		1.格式：头名称-值
+		2.常见的响应头：
+			1.Content-type：服务器告诉客户端响应体的数据格式和编码
+			2.content-disposition：服务器告诉客户端以什么格式打开响应数据。
+			in-lin
+			attachment；filename***：
+	
+	3. 响应空行
+	
+	4. 响应体：传输数据
+```
 
 
 
+### 2. Response - 重定向
 
-
+* 功能：设置响应消息

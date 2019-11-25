@@ -65,6 +65,16 @@ public class DruidUtils {
 
     }
 
+    /**
+     * 获取连接池对象
+     * @return
+     * @throws SQLException
+     */
+    public static DataSource getDataSource(){
+        return mDatasource;
+    }
+
+
     //1.获取连接方法
     public static Connection createConnection() throws SQLException {
         return mDatasource.getConnection();

@@ -13,7 +13,7 @@
   <body>
   <h1>开始学习</h1>
   <form action="login" method="get">
-    <input name="username">
+    <input type="text" name="username">
     <input type="submit" value="提交">
 
   </form>

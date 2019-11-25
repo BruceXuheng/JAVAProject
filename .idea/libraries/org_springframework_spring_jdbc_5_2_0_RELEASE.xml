@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="org.springframework:spring-jdbc:5.2.0.RELEASE" type="repository">
+    <properties maven-id="org.springframework:spring-jdbc:5.2.0.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/StudyWeb/web/WEB-INF/lib/spring-jdbc-5.2.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/StudyWeb/web/WEB-INF/lib/spring-beans-5.2.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/StudyWeb/web/WEB-INF/lib/spring-core-5.2.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/StudyWeb/web/WEB-INF/lib/spring-jcl-5.2.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/StudyWeb/web/WEB-INF/lib/spring-tx-5.2.0.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
