@@ -63,17 +63,22 @@ public class StudyRequestServlet extends HttpServlet {
         String username = request.getParameter("username");
 
         //转发
-        request.getRequestDispatcher("/loging").forward(request, response);
+//        request.getRequestDispatcher("/loging").forward(request, response);
 
         //共享数据
-        request.setAttribute("msg","hello");
-        request.getAttribute("msg");
-        request.removeAttribute("msg");
+//        request.setAttribute("msg","hello");
+//        request.getAttribute("msg");
+//        request.removeAttribute("msg");
 
         //获取ServletContext
         ServletContext sc = request.getServletContext();
 
-
+        //重定向处理
+        //No.1
+        response.sendRedirect("/StudyWeb/LoginSuccessServlet");
+        //No.2
+//        response.setStatus(302);
+//        response.setHeader("location","/LoginSuccessServlet");
 
     }
 

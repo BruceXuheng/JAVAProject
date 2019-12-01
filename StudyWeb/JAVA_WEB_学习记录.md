@@ -255,3 +255,40 @@ populate(object,map) 讲map集合的键值对，封装到Bean中
 ### 2. Response - 重定向
 
 * 功能：设置响应消息
+   	1. 设置响应行
+   	2. 设置响应头 setHeader()
+   	3. 设置响应体 
+       		1. 获取输入流
+             	1. 字符输出流：PrintWriter getWriter()
+             	2. 字节输出流：ServletOutputStream getOutputStream()
+       		2. 使用输出流，将数据输出到客户端浏览器
+
+重定向案例：
+
+```
+//重定向处理
+        //No.1
+        response.sendRedirect("/StudyWeb/LoginSuccessServlet");
+        //No.2
+        response.setStatus(302);        				      response.setHeader("location","/LoginSuccessServlet");
+```
+
+2. 重定向特点：redirect
+
+   1. 地址栏变化
+
+   2. 重定向可以访问其他服务器资源
+
+   3. 是两次请求，不能使用request对象共享数据
+
+3. 转发特点：forwar
+
+      1. 转发地址栏路径不变
+      2. 转发只能访问当前服务器下的资源
+      3. 转发试一次请求，可以使用request对象来共享数据
+
+      
+
+​       动态获取虚拟目录：contextPath
+
+​	request.getContextPath();
