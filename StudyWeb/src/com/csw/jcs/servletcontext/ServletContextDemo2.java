@@ -21,4 +21,5 @@ public class ServletContextDemo2 extends HttpServlet {
         System.out.println(servletContext1.getRealPath("/druid.properties"));
 
     }
+
 }

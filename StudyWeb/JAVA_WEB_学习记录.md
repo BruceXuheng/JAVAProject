@@ -337,3 +337,21 @@ populate(object,map) 讲map集合的键值对，封装到Bean中
 
 ​	3.获取文件的真实（服务器）路径
 
+
+
+# 下载文件
+
+步骤：
+
+1.定义页面，编辑超链接href属性，指向servlet，传递资源名称filename
+
+2.定义Servlet
+
+​	获取文件名称
+
+​	使用字符输入流加载文件进内存
+
+​	指定response的响应头：content-dispostion:attachment;filename=xxx
+
+​	将数据写出到response输出流
+
