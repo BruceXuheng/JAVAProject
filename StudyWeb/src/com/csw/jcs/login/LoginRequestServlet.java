@@ -27,11 +27,12 @@ public class LoginRequestServlet extends HttpServlet {
         PreparedStatement pstmt = null;
         try {
             connection = DruidUtils.createConnection();
-            String sqlStr = "insert into user values(null,?,?,?)";
+            String sqlStr = "insert into user values(?,?,?,?)";
             pstmt = connection.prepareStatement(sqlStr);
-            pstmt.setString(1, "chenxhheng");
-            pstmt.setString(2, "123321");
-            pstmt.setString(3, "1");
+            pstmt.setString(1, "2");
+            pstmt.setString(2, "chenxhheng");
+            pstmt.setString(3, "123321");
+            pstmt.setString(4, "1");
 
             int count = pstmt.executeUpdate();
 

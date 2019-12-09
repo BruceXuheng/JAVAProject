@@ -57,7 +57,7 @@ public class DruidUtils {
     static {
         try {
             Properties pro = new Properties();
-            pro.load(DruidUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
+            pro.load(DruidUtils.class.getClassLoader().getResourceAsStream("/druid.properties"));
             mDatasource = DruidDataSourceFactory.createDataSource(pro);
         } catch (Exception e) {
             e.printStackTrace();
@@ -124,5 +124,6 @@ public class DruidUtils {
             }
         }
     }
+
 
 }
