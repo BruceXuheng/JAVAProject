@@ -292,3 +292,66 @@ populate(object,map) 讲map集合的键值对，封装到Bean中
 ​       动态获取虚拟目录：contextPath
 
 ​	request.getContextPath();
+
+
+
+
+
+## 验证码
+
+
+
+## ServletContext对象
+
+1.概念：代表整个web应用，可以和程序的容器（服务器）来通信
+
+2.获取：
+
+ 1. 通过request对象获取
+
+    request.getServletContext()
+
+	2. 通过HttpServlet获取
+
+    this.getServletContext()
+
+3.功能：
+
+​	1.获取MIME类型
+
+​		*MIME类型 在互联网通讯过程中定义的一种文件数据类型
+
+​			*格式：大类型小类型 ;text/html;
+
+​		*获取：String getMimeType（String file）
+
+​	2.域对象：共享数据
+
+​		servletContext.setAttribute(String,Object)
+
+​		getAttribute()
+
+​		removeAttribute()
+
+
+
+​	3.获取文件的真实（服务器）路径
+
+
+
+# 下载文件
+
+步骤：
+
+1.定义页面，编辑超链接href属性，指向servlet，传递资源名称filename
+
+2.定义Servlet
+
+​	获取文件名称
+
+​	使用字符输入流加载文件进内存
+
+​	指定response的响应头：content-dispostion:attachment;filename=xxx
+
+​	将数据写出到response输出流
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+            分析超链接或者图片 需要换一张
+         */
+        window.onload = function () {
+            var img = document.getElementById("checkCode");
+            img.onclick = function (ev) {
+                //加时间戳
+                var date = new Date().getTime();
+                img.src = "/StudyWeb/checkCodeServlet?" + date;
+            };
+            var checkBtn = document.getElementById("changeCheck");
+            checkBtn.onclick = function () {
+                var date = new Date().getTime();
+                img.src = "/StudyWeb/checkCodeServlet?" + date;
+            }
+        }
+    </script>
+</head>
+<body>
+<img id="checkCode" src="/StudyWeb/checkCodeServlet">
+<a id="changeCheck">看不清楚</a>
+<a id="download" href="/StudyWeb/DownLoad1Servlet?fileName=Sketchpad.png">下载图片</a>
+<a id="download2"  href="">下载图片</a>
+</body>
+</html>
