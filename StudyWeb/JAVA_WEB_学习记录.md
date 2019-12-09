@@ -355,3 +355,79 @@ populate(object,map) 讲map集合的键值对，封装到Bean中
 
 ​	将数据写出到response输出流
 
+##  中文文件名显示
+
+需要Utils判断浏览器
+
+
+
+# Cookies
+
+客户端技术Cookie
+
+
+
+## 步骤
+
+1.创建Cookie对象，绑定数据
+
+​	*newCookie(String ，String）
+
+2.发送Cookie对象
+
+​	response.addCookie(Cookie cookie)
+
+3.获取Cookie 拿到数据
+
+​	Cookie[] request.getCookies()
+
+
+
+## 原理
+
+1.给予响应头set-cookie和请求头cookie实现
+
+
+
+## 注意事项
+
+1.是否可以发送多个cookie：可以创建多个Cookie对象
+
+2.cookie保存时间：
+
+​	1.默认情况下，浏览器关闭，cookie数据销毁
+
+​	2.持久化存储，setMaxAge（int seconds）
+
+​		参数：1.正数：将Cookie数据写到硬盘的文件中，持久化存储。cookie存活时间。2：负数：默认值，关闭浏览器即销毁。3：零：删除cookie信息。
+
+
+
+3.cookie是否可以存中文
+
+​	tomcat8之前 cookie不能直接存储中文数据 需要中文数据转码
+
+​	tomcat8之后可以支持
+
+4.cookie获取范围多大？ 单个4kb限制，一个域名下20个左右
+
+​	setPath(String path) :设置取值范围
+
+5.共享问题：
+
+​	1.同一个tomcat服务器中，多个web项目
+
+​	setPath("/") 可以共享
+
+​	2.不同tomcat服务器间
+
+​	setDomain(String path) 设置一级域名，多个服务器之间cookie可共享
+
+​	setDomain(".baidu.com"),那么tieba.baidu.com and news.baidu.com中cookie可以共享。
+
+​	
+
+
+
+## 场景
+
