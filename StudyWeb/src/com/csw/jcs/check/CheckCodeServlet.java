@@ -34,20 +34,22 @@ public class CheckCodeServlet extends HttpServlet {
         //3.随机数库
         String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijkklmnopqrstuvwxyz1234567890";
 
+        StringBuilder sb = new StringBuilder();
         Random random = new Random();
         g.setColor(Color.CYAN);
         for (int i = 1; i <= 4; i++) {
             int index = random.nextInt(str.length());
             char ch = str.charAt(index);
+            sb.append(ch);
             //写验证码：
             g.drawString(String.valueOf(ch), width / 5 * i, height / 2);
-
         }
 
+        request.getSession().setAttribute("verificationCode",sb);
 
         //画斜线
         g.setColor(Color.YELLOW);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             int x1 = random.nextInt(width);
             int x2 = random.nextInt(width);
             int y1 = random.nextInt(height);
