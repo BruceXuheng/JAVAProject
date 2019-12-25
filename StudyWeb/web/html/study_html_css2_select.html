@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Css选择器学习案例</title>
     <style>
+
         #pid{
             color: blue;
         }
@@ -20,6 +21,28 @@
         div span{
             background: lightblue;
         }
+        a:link{
+            color: blue;
+        }
+        a:hover{
+            color: red;
+        }
+        a:active{
+            color: green;
+        }
+        a:visited{
+            color: gold;
+        }
+
+        p::before{
+            content: '数据';
+            color: rebeccapurple;
+        }
+        p::after{
+            content: '另一些';
+            color: gold;
+        }
+
     </style>
 </head>
 <body>
@@ -33,5 +56,8 @@
     </span>
 </div>
 <span>span3</span>
+
+<a href="#">这是一个链接</a>
+<p>一些数据 和另一些数据 没有什么区别</p>
 </body>
 </html>
