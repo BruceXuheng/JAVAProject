@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POStion-static</title>
+    <style>
+        .bloack{
+            width:80px;
+            height: 80px;
+            border: 3px black solid;
+            line-height: 80px;
+            text-align: center;
+        }
+        .bloack:nth-child(1){
+            position: absolute;
+            border: 5px red solid;
+            top: 10px;
+            z-index: 9;
+        }
+        .bloack:nth-child(2){
+            position: absolute;
+            top: 10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+<div style="margin-left: 120px">
+    <p>123123</p>
+</div>
+<div>
+    <div class="bloack">A</div>
+    <div class="bloack">B</div>
+    <div class="bloack">C</div>
+
+</div>
+</body>
+</html>
