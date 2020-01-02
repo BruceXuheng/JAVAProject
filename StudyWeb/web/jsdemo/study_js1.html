@@ -50,8 +50,35 @@
     var ca = "123";
     var ca = null;
     ca = null;
+    c();
+    function c(){
+        if(ca == null){
+            console.log("if ca == null")
+        }
+        switch (ca){
+            case null:
+                console.log("switch ca == null");
+                break;
+            case "123":
+                console.log("ca == 123");
+                break;
+            default:
+                break;
+        }
+    }
 
+    var studentBean = {
+        name:"",
+        age:12,
+        sex:"man"
+    };
 
+    for (i in studentBean){
+        console.log(" "+i+studentBean[i]);
+        if(i==="man") {
+            continue;
+        }
+    }
 
 </script>
 </body>
