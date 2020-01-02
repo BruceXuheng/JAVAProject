@@ -6,8 +6,9 @@
 </head>
 <body>
 
-<div id="intro">123</div>
-<div class="main">
+<div id="intro" data="data">123</div>
+
+<div id="main">
     <p>MAIN - PPPPPPPPPPPP</p>
     <p>MAIN - PPPPPPPPPPPP</p>
 </div>
@@ -16,15 +17,41 @@
 <div class="content">1</div>
 <div class="content">1</div>
 
-<script>
+<img src="../img/login.png" id="img_main">
+
+<p id="jscss">JS CSS 变化</p>
+
+<script type="text/javascript">
     var intro = document.getElementById("intro");
     intro.innerText = "1222222222";
+    /**
+     *
+     * element.getAttribute();
+     * element.setAttribute();
+     * element.src;
+     * element.href;
+     *
+     */
+
+    // alert(intro.getAttribute("data"));
+
+        var img = document.getElementById("img_main");
+        img.src = "../img/weibo.png";
+
+    // var main = document.getElementById("main");
+    // var main_p = main.getElementsByTagName("p")[0];
+    // main_p.innerHTML = "<h1>1222222222222</h1>";
     var main = document.getElementById("main");
-    var main_p = main.getElementsByTagName("p")[0];
-    main_p.innerHTML = "<h1>1222222222222</h1>"
+    var p = main.getElementsByTagName("p")[0];
+    p.innerHTML = "123333111111111";
 
     var content1 = document.getElementsByClassName("content")[0];
     content1.innerHTML = "123333111111111";
+
+    var jscss = document.getElementById("jscss");
+    jscss.style.color = "blue";
+    jscss.style.fontStyle = "bold";
+    jscss.style.fontSize = "50px";
 
 </script>
 </body>

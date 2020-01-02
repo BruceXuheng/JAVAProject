@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windos 对象</title>
+</head>
+<body>
+
+<button onclick="openWindows()">创建窗口</button>
+<button onclick="tiaoWindows()">调整窗口</button>
+<button onclick="moveWindows()">移动窗口</button>
+<button onclick="closeWindows()">关闭窗口</button>
+
+<script type="text/javascript">
+    var w;
+
+    function openWindows() {
+        w = window.open('http://www.baidu.com','小明','width=800,height=500');
+    }
+
+    function tiaoWindows(){
+        w.resizeTo(555,500);
+        w.focus();
+    }
+
+    function moveWindows(){
+        w.moveTo(800,600);
+        w.focus();
+    }
+
+    function closeWindows(){
+        w.close(800,600);
+        w.focus();
+    }
+
+    /**
+     * 获取可用屏幕宽度、高度
+     */
+    alert(screen.availHeight + "  " + screen.availWidth);
+
+
+</script>
+
+</body>
+</html>

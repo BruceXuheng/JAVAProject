@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div onclick="alert('hello world')">html onclick 按钮</div>
+<div id="domonclick" >按钮</div>
+<div id="btn1">btn addEventListener 按钮</div>
+
+<div id="div">
+    <p id="p1">p1p1p1</p>
+    <p id="p2">p2p2p2</p>
+</div>
+
+<script type="text/javascript">
+    document.getElementById("domonclick").onclick = function (ev) {
+        alert('1233');
+    };
+    document.getElementById("btn1").addEventListener("click",function(){
+       alert("addEventListener Success")
+    });
+
+    var p = document.createElement("p");
+    var world = document.createTextNode("我是新增的P");
+    p.appendChild(world);
+
+    var div1 = document.getElementById("div");
+    div1.appendChild(p);
+
+    var p1 = document.getElementById("p1");
+    div1.removeChild(p1);
+
+
+</script>
+
+</body>
+</html>
