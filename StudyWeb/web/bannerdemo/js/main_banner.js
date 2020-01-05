@@ -60,7 +60,6 @@ function timerBanner() {
 
     //导航菜单
     for (var j = 0; j < menuItems.length; j++) {
-        // menuItems[i].id = i;
         menuItems[j].setAttribute("data-index", j);
         menuItems[j].onmouseover = function () {
             subMenu.className = 'sub-menu';
@@ -71,7 +70,19 @@ function timerBanner() {
         };
         menuItems[j].onmouseout = function () {
             subMenu.className = 'sub-menu hide';
+        };
+        subMenuInnerBoxs[j].setAttribute("data-index",j);
+        subMenuInnerBoxs[j].onmouseout = function () {
+            menuItems[this.getAttribute("data-index")].style.background = "none";
         }
+    }
+
+    
+    subMenu.onmouseout = function () {
+        subMenu.className="sub-menu hide";
+    };
+    subMenu.onmouseover = function () {
+        subMenu.className = "sub-menu"
     }
 
 
@@ -94,14 +105,11 @@ function changeImg() {
 timerBanner();
 
 function subMenuInnerBoxShow(i) {
-    console.log("---subMenuInnerBoxShow = " + i);
     for (var j = 0; j < subMenuInnerBoxs.length; j++) {
         if (i != j) {
-            console.log("---subMenuInnerBoxShow " + i + "！！！！！！！！= " + j);
             subMenuInnerBoxs[j].style.display = "none";
-            menuItems[j].style.background = "";
+            menuItems[j].style.background = "none";
         } else {
-            console.log("---subMenuInnerBoxShow " + i + "========= " + j);
             subMenuInnerBoxs[i].style.display = "block";
             menuItems[i].style.background = "rgba(0,0,0,0.1)";
         }
