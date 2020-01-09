@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    height: 0;
+}
+
+.text-show {
+    width: 170px;
+    height: 50px;
+    position: relative;
+}
+
+.btn-list {
+    width: 200px;
+    height: 70px;
+    float: left;
+    position: relative;
+}
+
+input[type="button"] {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+input[type="text"] {
+    width: 170px;
+    height: 40px;
+    position: relative;
+}
