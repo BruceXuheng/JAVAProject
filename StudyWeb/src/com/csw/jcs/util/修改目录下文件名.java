@@ -7,7 +7,8 @@ public class 修改目录下文件名 {
 
     public static void main(String[] args) {
         ArrayList<String> fileNameList = new ArrayList<>();
-        getAllFileName("G:\\java慕课就业\\2 web\\步骤一 网页搭建入门\\04 前端油画商城案例\\",fileNameList);
+        String fileFatherSrc = "G:\\java慕课就业\\2 web\\步骤二：JavaScript案例\\02 案例：仿计算器";
+        getAllFileName(fileFatherSrc,fileNameList);
     }
 
 
