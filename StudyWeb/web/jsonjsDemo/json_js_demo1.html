@@ -12,12 +12,20 @@
             var stu = jsonStr[i];
             document.write(stu.name);
             if(stu.work != null){
-                for (var j = 0; j < work.length ; j++) {
-                    document.write(work[j].workname);
+                for (var j = 0; j < stu.work.length ; j++) {
+                    document.write(stu.work[j].workname);
                 }
 
             }
         }
+
+        /**
+         * json字符串 转 对象
+         */
+        var jsonStr1 = "[{\"name\": \"Bruce\"}, {\"name\": \"chenxh\", \"work\": [{\"workname\": \"123123\"}, {\"workname\": \"111111\"}]}]";
+        var jsonStr1Json = JSON.parse(jsonStr1);
+        console.log(jsonStr1Json);
+
     </script>
 </head>
 <body>
