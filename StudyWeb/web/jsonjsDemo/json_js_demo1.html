@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript解析Demo</title>
+    <script type="text/javascript">
+
+        var jsonStr = [{"name": "Bruce"}, {"name": "chenxh", "work": [{"workname": "123123"}, {"workname": "111111"}]}];
+        console.log(jsonStr);
+        console.log(jsonStr.length);
+        for (var i = 0; i < jsonStr.length; i++) {
+            var stu = jsonStr[i];
+            document.write(stu.name);
+            if(stu.work != null){
+                for (var j = 0; j < work.length ; j++) {
+                    document.write(work[j].workname);
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
